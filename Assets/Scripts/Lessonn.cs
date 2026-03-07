@@ -10,9 +10,9 @@ public class Lessonn : MonoBehaviour
         //ShowGameStart();
         //ShowPlayerName("John Doe");
         //ShowPlayerStats(100, 50);
-        EnemySpawner(5,100,true,"Hasan",28);
+        //EnemySpawner(5,100,true,"Hasan",28);
         //CharacterName("Hero");
-        //GunBullet(20);
+        GunBullet();
     }
     public void Update()
     {
@@ -53,12 +53,13 @@ public class Lessonn : MonoBehaviour
         Debug.Log("Enemy Name: " + name);
         Debug.Log("Enemy Age: " + age);
     }
-    
-    private void GunBullet(int bullet)
+
+
+    private void GunBullet(int bullet = 10)
     {
-        for (int i = 0; i < bullet; i++)
+        for (int i = 0; i <= bullet; i++)
         {
-            Debug.Log("Bullet Fired");
+            Debug.Log("Bullet Fired "+ i);
         }
     }
 
