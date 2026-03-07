@@ -12,12 +12,14 @@ public class Lessonn : MonoBehaviour
         //ShowPlayerStats(100, 50);
         //EnemySpawner(5,100,true,"Hasan",28);
         //CharacterName("Hero");
-        GunBullet();
+        //GunBullet();
+
+       //float result = Carpma(5.3f, 10.2f);
+       //Debug.Log("Result: " + result);
+        PlayerNamee("Hasan");
+        Debug.Log("Name: " + PlayerNamee("Hasan"));
     }
-    public void Update()
-    {
-       
-    }
+
     #region Kod Örnekleri
     private void ShowGameStart()
     {
@@ -54,20 +56,36 @@ public class Lessonn : MonoBehaviour
         Debug.Log("Enemy Age: " + age);
     }
 
-
     private void GunBullet(int bullet = 10)
     {
         for (int i = 0; i <= bullet; i++)
         {
-            Debug.Log("Bullet Fired "+ i);
+            Debug.Log("Bullet Fired " + i);
         }
     }
 
-    private void CharacterName(string Name) 
+    private void CharacterName(string Name)
     {
-    Debug.Log("Character Name: " + Name);
+        Debug.Log("Character Name: " + Name);
     }
+    //ctrl K+D kodu düzenler
     #endregion
 
-   
+    #region Return Örnekleri
+    float Carpma(float a, float b)
+    {
+        return (a*b);
+    }
+
+    string PlayerNamee(string Hasan)
+    {
+        return Hasan;
+    }
+
+
+
+
+
+
+    #endregion
 }
