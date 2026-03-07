@@ -27,9 +27,9 @@ public class Lessonn : MonoBehaviour
 
     public void Update()
     {
-        GiveDamage(10);
-        CheckHealth();
-        Debug.Log("Damage: " + health);
+        //GiveDamage(10);
+        //CheckHealth();
+        //Debug.Log("Damage: " + health);
 
     }
 
@@ -115,6 +115,8 @@ public class Lessonn : MonoBehaviour
             health=0;
         }
     }
+
+   //solid prensibi araþtýr
     #endregion
 
 
