@@ -443,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Lessonn
   playerSpeed: 0
   enemySpeed: 0
+  health: 100
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
