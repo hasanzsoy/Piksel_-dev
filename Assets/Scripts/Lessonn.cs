@@ -23,9 +23,6 @@ public class Lessonn : MonoBehaviour
         //int playerHealth = 100;
         //bool isAlive = IsPlayerAlive(playerHealth);
         //Debug.Log("Is Player Alive: " + isAlive);
-
-        
-
     }
 
     public void Update()
