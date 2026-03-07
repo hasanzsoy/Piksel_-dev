@@ -14,10 +14,26 @@ public class Lessonn : MonoBehaviour
         //CharacterName("Hero");
         //GunBullet();
 
-       //float result = Carpma(5.3f, 10.2f);
-       //Debug.Log("Result: " + result);
-        PlayerNamee("Hasan");
-        Debug.Log("Name: " + PlayerNamee("Hasan"));
+        //float result = Carpma(5.3f, 10.2f);
+        //Debug.Log("Result: " + result);
+
+        //PlayerNamee("Hasan");
+        //Debug.Log("Name: " + PlayerNamee("Hasan"));
+
+        //int playerHealth = 100;
+        //bool isAlive = IsPlayerAlive(playerHealth);
+        //Debug.Log("Is Player Alive: " + isAlive);
+
+        
+
+    }
+
+    public void Update()
+    {
+        GiveDamage(10);
+        CheckHealth();
+        Debug.Log("Damage: " + health);
+
     }
 
     #region Kod Örnekleri
@@ -82,10 +98,25 @@ public class Lessonn : MonoBehaviour
         return Hasan;
     }
 
+    bool IsPlayerAlive(int health)
+    {
+        return health > 0;
+    }
 
+    public int health;
+    private void GiveDamage(int damageAmount)
+    {
+        health -= damageAmount;
+    }
 
-
-
-
+    private void CheckHealth()
+    {
+        if (health <= 0)
+        {
+            health=0;
+        }
+    }
     #endregion
+
+
 }
