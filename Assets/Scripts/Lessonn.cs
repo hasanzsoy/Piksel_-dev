@@ -30,7 +30,6 @@ public class Lessonn : MonoBehaviour
         //GiveDamage(10);
         //CheckHealth();
         //Debug.Log("Damage: " + health);
-
     }
 
     #region Kod Örnekleri
