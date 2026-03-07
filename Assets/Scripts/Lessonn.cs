@@ -102,7 +102,9 @@ public class Lessonn : MonoBehaviour
     {
         return health > 0;
     }
+    #endregion
 
+    #region Ders Örneði
     public int health;
     private void GiveDamage(int damageAmount)
     {
