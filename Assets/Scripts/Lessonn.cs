@@ -115,8 +115,7 @@ public class Lessonn : MonoBehaviour
         }
     }
 
-   //solid prensibi araþtýr
+    //solid prensibi araþtýr
     #endregion
-
 
 }
