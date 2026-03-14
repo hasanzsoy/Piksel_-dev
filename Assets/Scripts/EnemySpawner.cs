@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public int totalEnemy;
     public string[] enemyNames = { "Enemy1", "Enemy2", "Enemy3", "Enemy14" };
     public int spawnedEnemy;
 
@@ -10,10 +9,11 @@ public class EnemySpawner : MonoBehaviour
     {
         SpawnEnemies();
 
-        int count = CountEnemies();
-        Debug.Log("Total Enemy: " + count);
+        int totalEnemy = CountEnemies();
+        Debug.Log("Total Enemy: " + totalEnemy);
 
-        HasBossEnemy();
+        bool bossCheck = HasBossEnemy();
+        Debug.Log("Boss Exists: " + bossCheck);
 
         PrintEnemies();
 
@@ -21,7 +21,8 @@ public class EnemySpawner : MonoBehaviour
         Debug.Log("Random Enemy: " + randomEnemy);
     }
 
-    void SpawnEnemies()
+    
+    private void SpawnEnemies()
     {
         for (int i = 0; i < enemyNames.Length; i++)
         {
@@ -30,16 +31,18 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    int CountEnemies()
+    
+    private int CountEnemies()
     {
         return enemyNames.Length;
     }
 
-    bool HasBossEnemy()
+    
+    private bool HasBossEnemy()
     {
-        for (int i = 0; i < enemyNames.Length; i++)
+        foreach (string enemy in enemyNames)
         {
-            if (enemyNames[i] == "Boss")
+            if (enemy == "Boss")
             {
                 Debug.Log("Boss enemy detected!");
                 return true;
@@ -49,7 +52,8 @@ public class EnemySpawner : MonoBehaviour
         return false;
     }
 
-    void PrintEnemies()
+    
+    private void PrintEnemies()
     {
         foreach (string enemy in enemyNames)
         {
@@ -57,12 +61,10 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    string GetRandomEnemy()
+    
+    private string GetRandomEnemy()
     {
         int randomIndex = Random.Range(0, enemyNames.Length);
-
         return enemyNames[randomIndex];
     }
-
-
 }
