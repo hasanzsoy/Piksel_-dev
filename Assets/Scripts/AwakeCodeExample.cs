@@ -2,16 +2,22 @@ using UnityEngine;
 
 public class AwakeCodeExample : MonoBehaviour
 {
-    public EnemyData enemyData;
+    public EnemyData[] enemyData;
+    public int enemyCount;
 
     private void Start()
     {
-        enemyData = new EnemyData("Test", 1, 5, 10, EnemyType.Orc);
+        enemyData = new EnemyData[enemyCount];
+
+        for (int i = 0; i < enemyCount; i++) // burada girdiðimiz bilgileri inspectorda yazdýrdýk
+        {
+            enemyData[i] = new EnemyData("A",1,100,50,EnemyType.Goblin);
+        }
     }
 }
 
 [System.Serializable]
-public class EnemyData 
+public class EnemyData
 {
     public string enemyName;
     public int enemyID;
