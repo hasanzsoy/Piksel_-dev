@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class AwakeCodeExample : MonoBehaviour
 {
-    public EnemyData[] enemyData;
-    public int enemyCount;
+    public EnemyData[] enemyData; // array olarak enemyleri yazdýrdýk
+    public int enemyCount;  //burada enemy sayýsýný yazdýrdýk
 
     private void Start()
     {
