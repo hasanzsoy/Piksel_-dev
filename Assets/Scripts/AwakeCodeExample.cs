@@ -16,7 +16,7 @@ public class AwakeCodeExample : MonoBehaviour
     }
 }
 
-[System.Serializable]
+[System.Serializable] // dýþarýda oluþturulan classlarý görmek için bu mutlaka yazýlmalý
 public class EnemyData
 {
     public string enemyName;
