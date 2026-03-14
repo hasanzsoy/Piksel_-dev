@@ -67,4 +67,6 @@ public class EnemySpawner : MonoBehaviour
         int randomIndex = Random.Range(0, enemyNames.Length);
         return enemyNames[randomIndex];
     }
+
+    
 }
