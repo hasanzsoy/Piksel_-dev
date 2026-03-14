@@ -3,14 +3,12 @@ using UnityEngine;
 public class AwakeCodeExample : MonoBehaviour
 {
     public EnemyType enemyType;
-
     public CharacterClass characterClass;
 
     private void Start()
     {
         //enemyType = EnemyType.Orc;
         //Debug.Log("Enemy Type: " + enemyType);
-
         //gameState = GameState.Playing;
         //Debug.Log("Game State: " + gameState);
 
