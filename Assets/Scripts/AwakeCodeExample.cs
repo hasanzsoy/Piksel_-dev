@@ -2,41 +2,36 @@ using UnityEngine;
 
 public class AwakeCodeExample : MonoBehaviour
 {
-    public EnemyType enemyType;
-    public CharacterClass characterClass;
+    public EnemyData enemyData;
 
     private void Start()
     {
-        //enemyType = EnemyType.Orc;
-        //Debug.Log("Enemy Type: " + enemyType);
-        //gameState = GameState.Playing;
-        //Debug.Log("Game State: " + gameState);
-
-        switch (characterClass)
-        {
-            case CharacterClass.Warrior:
-                Debug.Log("Savaþcýyý seçtiniz!");
-                break;
-            case CharacterClass.Mage:
-                Debug.Log("Büyücüyü seçtiniz!");
-                break;
-            case CharacterClass.Archer:
-                Debug.Log("Okuçuyu seçtiniz!");
-                break;
-        }
+        enemyData = new EnemyData("Test", 1, 5, 10, EnemyType.Orc);
     }
+}
 
-    public enum EnemyType
+[System.Serializable]
+public class EnemyData 
+{
+    public string enemyName;
+    public int enemyID;
+    public int enemyHealth;
+    public int enemySpeed;
+    public EnemyType enemyType;
+
+    public EnemyData(string name, int id, int health, int speed, EnemyType type)
     {
-        Goblin,
-        Orc,
-        Troll
+        enemyName = name;
+        enemyID = id;
+        enemyHealth = health;
+        enemySpeed = speed;
+        enemyType = type;
     }
 
-    public enum CharacterClass
-    {
-        Warrior,
-        Mage,
-        Archer
-    }
+}
+
+public enum EnemyType
+{
+    Goblin,
+    Orc,
 }
