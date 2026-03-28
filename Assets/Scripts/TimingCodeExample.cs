@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class TimingCodeExample : MonoBehaviour
 {
@@ -8,7 +7,8 @@ public class TimingCodeExample : MonoBehaviour
 
     private void Start()
     {
-        Invoke("ShowMessage", 3); // invokeda fonksyionu string deðerde çaðýrabilriz
+        //Invoke("ShowMessage", 3); // invokeda fonksyionu string deðerde çaðýrabilriz
+        InvokeRepeating("ShowMessage",2,3);
     }
     void Update()
     {
