@@ -9,7 +9,8 @@ public class CharacterManager : MonoBehaviour
     {
         characterDatas = new CharacterData[5];
 
-        for (int i = 0; i < characterCount; i++)
+        for (int i = 0; i < characterCount; i++) //BURAYI YAPAY ZEKAYA YAPTIRDIM
+
         {
             int id = i + 1;
             string name = "Character: " + id;
@@ -32,8 +33,8 @@ public class CharacterManager : MonoBehaviour
     }
 
 
-    //BURAYI YAPAY ZEKAYA YAPTIRDIM
-    void PrintCharacters()
+   
+    void PrintCharacters() //ben yazdým
     {
         for (int i = 0; i < characterDatas.Length; i++)
         {
@@ -46,7 +47,7 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
-    int CountWarriors()
+    int CountWarriors() 
     {
         int warriorCount = 0;
 
@@ -61,7 +62,7 @@ public class CharacterManager : MonoBehaviour
         return warriorCount;
     }
 
-    CharacterData GetStrongestCharacter()
+    CharacterData GetStrongestCharacter() 
     {
         CharacterData strongest = characterDatas[0];
 
@@ -77,8 +78,8 @@ public class CharacterManager : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public struct CharacterData
+[System.Serializable] //ben yazdým
+public struct CharacterData //ben yazdým
 {
     public int characterID;
     public string characterName;
@@ -87,7 +88,7 @@ public struct CharacterData
     public float characterDamage;
     public float characterSpeed;
 
-    public CharacterData(int id, string name, CharacterClass charClass, int health, float damage, float speed)
+    public CharacterData(int id, string name, CharacterClass charClass, int health, float damage, float speed) //ben yazdým
     {
         characterID = id;
         characterName = name;
@@ -98,7 +99,7 @@ public struct CharacterData
     }
 }
 
-public enum CharacterClass
+public enum CharacterClass//ben yazdým
 {
     Warrior,
     Mage,
