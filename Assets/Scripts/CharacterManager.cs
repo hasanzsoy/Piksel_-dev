@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    public CharacterData[] characterDatas;
+    public CharacterData[] characterDatas = new CharacterData[5];
     public int characterCount;
 
     void Start()
     {
-        characterDatas = new CharacterData[5];
+        //characterDatas = new CharacterData[5];
 
         for (int i = 0; i < characterCount; i++) //BURAYI YAPAY ZEKAYA YAPTIRDIM
 
@@ -15,7 +15,7 @@ public class CharacterManager : MonoBehaviour
             int id = i + 1;
             string name = "Character: " + id;
 
-            CharacterClass randomClass = (CharacterClass)Random.Range(0, System.Enum.GetValues(typeof(CharacterClass)).Length);
+            CharacterClass randomClass = (CharacterClass)Random.Range(0, 4);
 
             int health = Random.Range(80, 151);
             float damage = Random.Range(10f, 50f);
@@ -29,7 +29,7 @@ public class CharacterManager : MonoBehaviour
         Debug.Log("Warrior Count: " + CountWarriors());
 
         CharacterData strongest = GetStrongestCharacter();
-        Debug.Log("Strongest Character: " + strongest.characterName + " Damage: " + strongest.characterDamage);
+        Debug.Log("En Güçlü Karakter: " + strongest.characterName + " Damage: " + strongest.characterDamage);
     }
 
 
@@ -78,7 +78,7 @@ public class CharacterManager : MonoBehaviour
     }
 }
 
-[System.Serializable] //ben yazdým
+[System.Serializable] 
 public struct CharacterData //ben yazdým
 {
     public int characterID;
