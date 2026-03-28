@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class TimingCodeExample : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public int cubeSpeed;
     void Update()
     {
-        
+        transform.Translate(Vector3.forward * Time.deltaTime *cubeSpeed);
+        Debug.Log("Time : " + Time.time);
     }
 }
